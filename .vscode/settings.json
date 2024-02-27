@@ -4,5 +4,17 @@
         "activityBar.background": "#203301",
         "titleBar.activeBackground": "#2D4801",
         "titleBar.activeForeground": "#F3FEE0"
-    }
+    },
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Devcontainer DB",
+            "username": "postgres",
+            "password": "postgres",
+            "database": "postgres"
+        }
+    ]
 }
