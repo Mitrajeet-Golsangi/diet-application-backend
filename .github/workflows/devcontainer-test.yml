@@ -33,11 +33,20 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
+          tags: |
+            # dynamically set the branch name as a prefix
+            type=sha,prefix={{branch}}-
+        
       - name: Pre-build image and run make test in dev container
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
-          cacheFrom: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
+          imageName: ${{env.REGISTRY}}/${{github.repository_owner}}/${{steps.meta.outputs.tags}}
+          cacheFrom: ${{env.REGISTRY}}/${{github.repository_owner}}/${{steps.meta.outputs.tags}}
           push: always
           runCmd: |
             make dep
