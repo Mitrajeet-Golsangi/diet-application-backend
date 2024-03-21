@@ -1,4 +1,4 @@
-name: Test
+name: Devcontainer Image Pre-build
 
 on:
   push:
@@ -35,6 +35,6 @@ jobs:
       - name: Pre-build dev container image and push to container registry
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME}}
-          cacheFrom: ${{env.REGISTRY}}/${{github.actor}}/${{env.IMAGE_NAME}}
+          imageName: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
+          cacheFrom: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
           push: always
