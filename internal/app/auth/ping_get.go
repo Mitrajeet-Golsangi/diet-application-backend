@@ -1,8 +1,6 @@
-package usermanagementapi
+package auth
 
 import (
-	"log"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -11,7 +9,6 @@ import (
 func PingGet() gin.HandlerFunc {
 
 	return func(c *gin.Context) {
-		log.Println("PingGet: Successfully pinged the /ping endpoint. API working correctly.")
 		c.JSON(200, gin.H{
 			"message": "pong",
 		})

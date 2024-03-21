@@ -12,7 +12,7 @@ run:
 # Testing the application
 .PHONY: test
 test:
-	go test
+	go test -timeout 30s ./test/...
 
 # Organize the dependencies for the application and update the vendor data
 .PHONY: dep

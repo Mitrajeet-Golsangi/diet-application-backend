@@ -19,19 +19,5 @@ type UserRegistrationResponse struct {
 	Code int
 
 	// The new user created in the database
-	User User
-}
-
-type CoinBalanceProgram struct {
-	Username string
-}
-
-type CoinBalanceResponse struct {
-	Code int
-	Balance int64
-}
-
-type Error struct {
-	Code int
-	
+	// User User
 }
