@@ -32,7 +32,16 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
+          tags: |
+            # Dynamically set the branch name as a prefix
+            type=sha,prefix={{branch}}-
+      
       - name: Run make test in dev container
         uses: devcontainers/ci@v0.3
         with:    
