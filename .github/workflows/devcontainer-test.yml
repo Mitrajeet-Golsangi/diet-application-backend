@@ -46,7 +46,6 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ${{steps.meta.outputs.tags}}
-          cacheFrom: ${{steps.meta.outputs.tags}}
           push: always
           runCmd: |
             make dep
