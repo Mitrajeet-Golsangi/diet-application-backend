@@ -41,11 +41,13 @@ jobs:
           tags: |
             # Dynamically set the branch name as a prefix
             type=sha,prefix={{branch}}-
-      
-      - name: Run make test in dev container
+
+      - name: Pre-build image and run make test in dev container
         uses: devcontainers/ci@v0.3
-        with:    
-          push: never
+        with:
+          imageName: ${{steps.meta.outputs.tags}}
+          cacheFrom: ${{steps.meta.outputs.tags}}
+          push: always
           runCmd: |
             make dep
-            make test    
+            make test
