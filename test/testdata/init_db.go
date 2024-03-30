@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/db"
+	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -21,13 +21,32 @@ func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
 		Conn:       mockDB,
 		DriverName: "postgres",
 	})
-	
+
 	DB, _ := gorm.Open(dialector, &gorm.Config{})
 
-	DB.AutoMigrate(&db.User{}, &db.HealthInformation{}, &db.ExerciseInformation{})
+	// Expect creation of the user table
+	mock.ExpectQuery("SELECT .*").WillReturnRows(sqlmock.NewRows([]string{"version"}))
+	mock.ExpectExec("CREATE TABLE \"users\" (.+)").WillReturnResult(sqlmock.NewResult(0, 0))
+	mock.ExpectExec("CREATE INDEX IF NOT EXISTS \".+\" ON \".+\" (.+)").WillReturnResult(sqlmock.NewResult(0, 0))
+	
+	// Expect creation of the exercise information table
+	mock.ExpectQuery("SELECT .*").WillReturnRows(sqlmock.NewRows([]string{"version"}))
+	mock.ExpectExec("CREATE TABLE \"exercise_informations\" (.+)").WillReturnResult(sqlmock.NewResult(0, 0))
+	mock.ExpectExec("CREATE INDEX IF NOT EXISTS \".+\" ON \".+\" (.+)").WillReturnResult(sqlmock.NewResult(0, 0))
+	
+	// Expect creation of the user_exercises table
+	mock.ExpectQuery("SELECT .*").WillReturnRows(sqlmock.NewRows([]string{"version"}))
+	mock.ExpectExec("CREATE TABLE \"user_exercises\" (.+)").WillReturnResult(sqlmock.NewResult(0, 0))
+	
+	// Expect creation of the health information table
+	mock.ExpectQuery("SELECT .*").WillReturnRows(sqlmock.NewRows([]string{"version"}))
+	mock.ExpectExec("CREATE TABLE \"health_informations\" (.+)").WillReturnResult(sqlmock.NewResult(0, 0))
+	mock.ExpectExec("CREATE INDEX IF NOT EXISTS \".+\" ON \".+\" (.+)").WillReturnResult(sqlmock.NewResult(0, 0))
+	
+	DB.AutoMigrate(&models.User{}, &models.HealthInformation{}, &models.ExerciseInformation{})
 
 	// Create sample new users
-	user1 := db.User{
+	user1 := models.User{
 		Name:        "John Doe",
 		Email:       "john.doe@example.com",
 		Username:    "johndoe",
@@ -36,7 +55,7 @@ func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
 		Gender:      "Male",
 	}
 
-	user2 := db.User{
+	user2 := models.User{
 		Name:        "Jane Doe",
 		Email:       "jane.doe@example.com",
 		Username:    "janedoe",
@@ -45,11 +64,22 @@ func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
 		Gender:      "Female",
 	}
 
-	DB.Create(&user1)
-	DB.Create(&user2)
+	mock.ExpectBegin()
+	mock.ExpectQuery("INSERT INTO \"users\" (.+) VALUES (.+)").WillReturnRows(mock.NewRows([]string{"id"}).AddRow("1"))
+	mock.ExpectCommit()
+
+	user1.BeforeSave(DB)
+	u1, _ := user1.Save(DB)
+
+	mock.ExpectBegin()
+	mock.ExpectQuery("INSERT INTO \"users\" (.+) VALUES (.+)").WillReturnRows(mock.NewRows([]string{"id"}).AddRow("1"))
+	mock.ExpectCommit()
+
+	user2.BeforeSave(DB)
+	u2, _ := user2.Save(DB)
 
 	// Create sample new health information
-	healthInfo1 := db.HealthInformation{ // Data for User 1
+	healthInfo1 := models.HealthInformation{ // Data for User 1
 		Height:            180,
 		Weight:            70,
 		BMI:               21.6,
@@ -57,37 +87,37 @@ func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
 		ExerciseFrequency: 3,
 	}
 
-	healthInfo2 := db.HealthInformation{ // Data for User 2
+	healthInfo2 := models.HealthInformation{ // Data for User 2
 		Height:            160,
 		Weight:            80,
 		BMI:               31.2,
 		Birthday:          time.Date(1990, 2, 1, 0, 0, 0, 0, time.UTC),
 		ExerciseFrequency: 3,
 	}
-	
+
 	DB.Create(&healthInfo1)
 	DB.Create(&healthInfo2)
 
 	// Associate the health information with the users
-	DB.Model(&user1).Association("HealthInformation").Append(&healthInfo1)
-	DB.Model(&user2).Association("HealthInformation").Append(&healthInfo2)
+	DB.Model(u1).Association("HealthInformation").Append(&healthInfo1)
+	DB.Model(u2).Association("HealthInformation").Append(&healthInfo2)
 
 	// Create sample new exercise information
-	exerciseInfo1 := db.ExerciseInformation{
+	exerciseInfo1 := models.ExerciseInformation{
 		ActivityName:      "Running",
 		Category:          "Cardio",
 		Resistance:        "High",
 		EnergyExpenditure: 1.75,
 	}
 
-	exerciseInfo2 := db.ExerciseInformation{
+	exerciseInfo2 := models.ExerciseInformation{
 		ActivityName:      "Circuit training, minimal rest",
 		Category:          "Resistance",
 		Resistance:        "High",
 		EnergyExpenditure: 1.64,
 	}
-	
-	exerciseInfo3 := db.ExerciseInformation{
+
+	exerciseInfo3 := models.ExerciseInformation{
 		ActivityName:      "Weight lifting, light workout",
 		Category:          "Resistance",
 		Resistance:        "Low",
@@ -99,8 +129,8 @@ func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
 	DB.Create(&exerciseInfo3)
 
 	// Add association for the users and their performed exercises
-	DB.Model(&user1).Association("Exercises").Append([]db.ExerciseInformation{exerciseInfo1, exerciseInfo2})
-	DB.Model(&user2).Association("Exercises").Append([]db.ExerciseInformation{exerciseInfo1, exerciseInfo3})
-	
+	DB.Model(u1).Association("Exercises").Append([]models.ExerciseInformation{exerciseInfo1, exerciseInfo2})
+	DB.Model(u2).Association("Exercises").Append([]models.ExerciseInformation{exerciseInfo1, exerciseInfo3})
+
 	return DB, mock
 }

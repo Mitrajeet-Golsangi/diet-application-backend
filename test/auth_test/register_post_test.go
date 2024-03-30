@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth"
-	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/db"
+	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/test/testdata"
 	"github.com/stretchr/testify/assert"
 )
@@ -17,7 +17,7 @@ func TestRegisterPost(t *testing.T) {
 	r := testdata.SetupRouter()
 	DB, mock := testdata.InitializeTestDB()
 
-	sampleData := db.User{
+	sampleData := models.User{
 		Name:        "AAA",
 		Email:       "aaa@test.com",
 		Username:    "aaa",
@@ -40,4 +40,5 @@ func TestRegisterPost(t *testing.T) {
 	r.ServeHTTP(w, req)
 
 	assert.Equal(t, http.StatusCreated, w.Code)
+	assert.Nil(t, mock.ExpectationsWereMet())
 }

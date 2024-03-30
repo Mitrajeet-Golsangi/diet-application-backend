@@ -36,22 +36,22 @@ func main() {
 			"/user": gin.H{
 				"/register": "POST | Create a new user in the database",
 				"/login": "POST | Log in an existing user in the database",
-			},
+		},
 		})
 	})
 
 	// The user management API endpoints
 	user := r.Group("/user")
 	{
-		user.GET("/ping", auth.PingGet())
-		
+		// User Registration Endpoints
 		user.GET("/register", helpers.MethodNotAllowed("GET Method not Allowed !"))
 		user.POST("/register", auth.RegisterPost(database))
 		
+		// User Login Endpoints
 		user.GET("/login", helpers.MethodNotAllowed("GET Method not Allowed !"))
 		user.POST("/login", auth.LoginPost(database))
 	}
 
-	// listen and serve on 0.0.0.0:8080
+	// listen and serve on 0.0.0.0:8000
 	r.Run()
 }
