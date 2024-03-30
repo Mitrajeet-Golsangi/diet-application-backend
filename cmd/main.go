@@ -2,9 +2,11 @@ package main
 
 import (
 	"log"
+	"net/http"
 
-	"github.com/Mitrajeet-Golsangi/diet-application-backend/cmd/http"
+	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth"
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/db"
+	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -30,13 +32,25 @@ func main() {
 	//? Note: Update this sitemap after making changes to the API
 	//? endpoints further down the line in the application
 	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"User Management": "/user/ping | GET | Pings the user management API",
+		c.JSON(http.StatusOK, gin.H{
+			"/user": gin.H{
+				"/register": "POST | Create a new user in the database",
+				"/login": "POST | Log in an existing user in the database",
+			},
 		})
 	})
 
 	// The user management API endpoints
-	http.LoadAuthEndpoints(r, database)
+	user := r.Group("/user")
+	{
+		user.GET("/ping", auth.PingGet())
+		
+		user.GET("/register", helpers.MethodNotAllowed("GET Method not Allowed !"))
+		user.POST("/register", auth.RegisterPost(database))
+		
+		user.GET("/login", helpers.MethodNotAllowed("GET Method not Allowed !"))
+		user.POST("/login", auth.LoginPost(database))
+	}
 
 	// listen and serve on 0.0.0.0:8080
 	r.Run()
