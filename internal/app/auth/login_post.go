@@ -4,7 +4,6 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"gorm.io/gorm"
 
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers"
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
@@ -15,7 +14,7 @@ type LoginInput struct {
 	Password string `json:"password" binding:"required"`
 }
 
-func LoginPost(DB *gorm.DB) gin.HandlerFunc {
+func LoginPost() gin.HandlerFunc {
 	return func(c *gin.Context) {
 
 		var input LoginInput
@@ -27,7 +26,7 @@ func LoginPost(DB *gorm.DB) gin.HandlerFunc {
 		}
 
 		// Check if the user exists in the database
-		token, err := models.CheckByUsername(input.Username, input.Password, DB)
+		token, err := models.CheckByUsername(input.Username, input.Password)
 
 		// Throw and error if the login fails
 		if err != nil {

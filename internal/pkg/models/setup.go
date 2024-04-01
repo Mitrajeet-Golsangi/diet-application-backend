@@ -1,17 +1,18 @@
-package db
+package models
 
 import (
 	"log"
 	"os"
 	"time"
 
-	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )
 
-func InitDatabase() *gorm.DB {
+var DB *gorm.DB
+
+func InitDatabase() {
 
 	// Configure database logging for the server
 	consoleLogger := logger.New(
@@ -37,11 +38,11 @@ func InitDatabase() *gorm.DB {
 
 	// Create a list containing all the above structs
 	// and pass it to the AutoMigrate function to create the tables in the database
-	err = db.AutoMigrate(&models.User{}, &models.HealthInformation{}, &models.ExerciseInformation{})
+	err = db.AutoMigrate(&User{}, &HealthInformation{}, &ExerciseInformation{})
 	if err != nil {
 		log.Fatal("Failed to migrate the schemas !")
 		panic("Failed to migrate the schemas !")
 	}
 
-	return db
+	DB = db
 }

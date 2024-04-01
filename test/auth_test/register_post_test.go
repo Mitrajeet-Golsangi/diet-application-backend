@@ -13,10 +13,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestRegisterPost(t *testing.T) {
+func TestRegisterPostSuccess(t *testing.T) {
 	r := testdata.SetupRouter()
-	DB, mock := testdata.InitializeTestDB()
+	mock := testdata.InitializeTestDB()
 
+	// Create a sample user to insert in the database
 	sampleData := models.User{
 		Name:        "AAA",
 		Email:       "aaa@test.com",
@@ -26,17 +27,21 @@ func TestRegisterPost(t *testing.T) {
 		Gender:      "Male",
 	}
 
+	// Convert the sample data to JSON
 	jsonBody, _ := json.Marshal(sampleData)
 
+	// Expect the insert query to be executed and return the user ID
 	mock.ExpectBegin()
 	mock.ExpectQuery("INSERT INTO \"users\" (.+) VALUES (.+)").WillReturnRows(mock.NewRows([]string{"id"}).AddRow("1"))
 	mock.ExpectCommit()
 
-	r.POST("/", auth.RegisterPost(DB))
+	// Mock the endpoint mapping to the register post request
+	r.POST("/", auth.RegisterPost())
 	
+	// Send the register post request
 	req, _ := http.NewRequest("POST", "/", bytes.NewBuffer(jsonBody))
 	w := httptest.NewRecorder()
-
+	
 	r.ServeHTTP(w, req)
 
 	assert.Equal(t, http.StatusCreated, w.Code)

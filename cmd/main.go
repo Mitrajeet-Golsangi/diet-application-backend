@@ -5,8 +5,9 @@ import (
 	"net/http"
 
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth"
-	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/db"
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers"
+	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
+	"github.com/Mitrajeet-Golsangi/diet-application-backend/middlewares"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -23,7 +24,7 @@ func init() {
 
 func main() {
 	// Connect to the database
-	database := db.InitDatabase()
+	models.InitDatabase()
 
 	// Create a new Gin router
 	r := gin.Default()
@@ -45,11 +46,21 @@ func main() {
 	{
 		// User Registration Endpoints
 		user.GET("/register", helpers.MethodNotAllowed("GET Method not Allowed !"))
-		user.POST("/register", auth.RegisterPost(database))
+		user.POST("/register", auth.RegisterPost())
 		
 		// User Login Endpoints
 		user.GET("/login", helpers.MethodNotAllowed("GET Method not Allowed !"))
-		user.POST("/login", auth.LoginPost(database))
+		user.POST("/login", auth.LoginPost())
+	}
+
+	// Protected Routes
+	//? Note: The JWT token is required to access these routes
+	//? The JWT token can be obtained by logging in using the /user/login endpoint
+	//? The JWT token must be passed in the Authorization header as a Bearer token
+	protected := r.Group("/api/v1/admin")
+	{
+		protected.Use(middlewares.JwtAuthMiddleware())
+		protected.GET("/user", auth.CurrentUser())
 	}
 
 	// listen and serve on 0.0.0.0:8000

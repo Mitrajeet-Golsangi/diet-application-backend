@@ -7,12 +7,11 @@ import (
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers"
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
 	"github.com/gin-gonic/gin"
-	"gorm.io/gorm"
 )
 
 // PingGet returns a Gin handler function that handles the GET request for the /ping path.
 // The handler function returns a JSON response with the message "pong".
-func RegisterPost(DB *gorm.DB) gin.HandlerFunc {
+func RegisterPost() gin.HandlerFunc {
 
 	return func(c *gin.Context) {
 
@@ -26,7 +25,7 @@ func RegisterPost(DB *gorm.DB) gin.HandlerFunc {
 		}
 
 		// Create a new user in the database
-		user, err := user.Save(DB)
+		user, err := user.Save()
 
 		// Throw an error if the user creation fails
 		if err != nil {
@@ -39,7 +38,7 @@ func RegisterPost(DB *gorm.DB) gin.HandlerFunc {
 			helpers.InternalServerError(c, "Failed to convert user to JSON !")
 			return
 		}
-		
+
 		log.Println("New User Registered Successfully !")
 
 		c.JSON(http.StatusCreated, user)

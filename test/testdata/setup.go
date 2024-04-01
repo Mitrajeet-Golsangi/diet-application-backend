@@ -1,6 +1,7 @@
 package testdata
 
 import (
+	"testing"
 	"time"
 
 	"github.com/DATA-DOG/go-sqlmock"
@@ -15,7 +16,18 @@ func SetupRouter() *gin.Engine {
 	return router
 }
 
-func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
+// Initialize the testing database with the required tables and sample data
+// Users:
+// 		John Doe
+//		Jane Doe
+// Health Information: 
+// 		John Doe => Weight: 70, Height: 180, BMI: 21.6, Birthday: 1990-01-01, Exercise Frequency: 3
+//		Jane Doe => Weight: 80, Height: 160, BMI: 31.2, Birthday: 1990-02-01, Exercise Frequency: 3
+// Exercise Information:
+// 		Running 
+// 		Circuit training, minimal rest
+//		Weight lifting, light workout
+func InitializeTestDB() sqlmock.Sqlmock {
 	mockDB, mock, _ := sqlmock.New()
 	dialector := postgres.New(postgres.Config{
 		Conn:       mockDB,
@@ -23,6 +35,9 @@ func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
 	})
 
 	DB, _ := gorm.Open(dialector, &gorm.Config{})
+
+	// Assign the test database to the model database variable used globally
+	models.DB = DB
 
 	// Expect creation of the user table
 	mock.ExpectQuery("SELECT .*").WillReturnRows(sqlmock.NewRows([]string{"version"}))
@@ -69,14 +84,14 @@ func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
 	mock.ExpectCommit()
 
 	user1.BeforeSave(DB)
-	u1, _ := user1.Save(DB)
+	u1, _ := user1.Save()
 
 	mock.ExpectBegin()
 	mock.ExpectQuery("INSERT INTO \"users\" (.+) VALUES (.+)").WillReturnRows(mock.NewRows([]string{"id"}).AddRow("1"))
 	mock.ExpectCommit()
 
 	user2.BeforeSave(DB)
-	u2, _ := user2.Save(DB)
+	u2, _ := user2.Save()
 
 	// Create sample new health information
 	healthInfo1 := models.HealthInformation{ // Data for User 1
@@ -132,5 +147,14 @@ func InitializeTestDB() (*gorm.DB, sqlmock.Sqlmock) {
 	DB.Model(u1).Association("Exercises").Append([]models.ExerciseInformation{exerciseInfo1, exerciseInfo2})
 	DB.Model(u2).Association("Exercises").Append([]models.ExerciseInformation{exerciseInfo1, exerciseInfo3})
 
-	return DB, mock
+	return mock
+}
+
+// Setup the environment variables for the tests
+// TOKEN_HOUR_LIFESPAN: 1
+// API_SECRET: secret
+func InitializeEnv(t *testing.T) {
+	// Set the environment variables
+	t.Setenv("TOKEN_HOUR_LIFESPAN", "1")
+	t.Setenv("API_SECRET", "secret")
 }

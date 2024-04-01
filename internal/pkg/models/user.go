@@ -1,6 +1,7 @@
 package models
 
 import (
+	"errors"
 	"html"
 	"strings"
 
@@ -25,7 +26,7 @@ type User struct {
 }
 
 // Save the user to the database
-func (u *User) Save(DB *gorm.DB) (*User, error) {
+func (u *User) Save() (*User, error) {
 
 	if err := DB.Create(&u).Error; err != nil {
 		return &User{}, err
@@ -50,7 +51,7 @@ func (u *User) BeforeSave(tx *gorm.DB) error {
 }
 
 // Try to log in the user with the username and password provided
-func CheckByUsername(username string, password string, DB *gorm.DB) (string, error) {
+func CheckByUsername(username string, password string) (string, error) {
 	var err error
 
 	u := User{}
@@ -74,6 +75,24 @@ func CheckByUsername(username string, password string, DB *gorm.DB) (string, err
 	}
 
 	return token, nil
+}
+
+// Find the user from the database with the provided ID
+func GetUserByID(uid uint) (User, error) {
+	var u User
+
+	if err := DB.First(&u, uid).Error; err != nil {
+		return u, errors.New("User not Found")
+	}
+
+	u.PrepareGive()
+
+	return u, nil
+}
+
+// Return the user without the password
+func (u *User) PrepareGive() {
+	u.Password = ""
 }
 
 // Verify the password provided in the login request with the hashed password stored in the database
