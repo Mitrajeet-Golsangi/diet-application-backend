@@ -37,6 +37,7 @@ help:
 	@echo "make test\t\t- Run the tests for the API"
 	@echo "make dep\t\t- Organize the dependencies for the application and update the vendor data"
 	@echo "make build\t\t- Build the application"
+	@echo "make setup\t\t- Setup the devcontainer with required tools"
 	@echo "make clean\t\t- Clean the application's build files and other generated files"
 	@echo "make docker-build\t- Build the docker image for the application"
 	@echo "make docker-run\t\t- Run the docker container for the application"
