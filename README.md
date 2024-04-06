@@ -1,3 +1,5 @@
+[![Testing Workflow](https://github.com/Mitrajeet-Golsangi/diet-application-backend/actions/workflows/devcontainer-test.yml/badge.svg?branch=main)](https://github.com/Mitrajeet-Golsangi/diet-application-backend/actions/workflows/devcontainer-test.yml)
+
 # Diet Application Backend
 A simple backend built with Golang with the help of Gin and Gorm for building a RESTful API with PostgreSQL as the database
 
