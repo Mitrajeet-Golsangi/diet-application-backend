@@ -23,14 +23,16 @@
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/firebase-cli:2": {},
+    "ghcr.io/devcontainers/features/java:1": {}
   },
 
   // Configure tool-specific properties.
   // "customizations": {},
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [5432],
+  "forwardPorts": [5432, 5642, 5643, 5644],
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "go mod download && go mod tidy && go mod vendor"

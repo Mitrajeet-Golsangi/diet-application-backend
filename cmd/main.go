@@ -3,8 +3,10 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth"
+	firebaseapp "github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/firebase_app"
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers"
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
 	"github.com/Mitrajeet-Golsangi/diet-application-backend/middlewares"
@@ -13,19 +15,28 @@ import (
 )
 
 func init() {
-	// load the environment variables from the .env file
-	err := godotenv.Load()
-
+	// Get the current working directory
+	cwd, err := os.Getwd()
 	if err != nil {
 		log.SetPrefix("API Server | ")
-		log.Fatalln("| Error loading the .env file !")
+		log.Fatalln("| Error getting the current working directory !")
 	}
+	
+	// load the environment variables from the .env file
+	err = godotenv.Load(cwd + "/.env")
+	if err != nil {
+		log.SetPrefix("API Server | ")
+		log.Println("| Error loading the .env file, working in Production mode !")
+	}
+	
+	// Initialize the Firebase Application
+	firebaseapp.Initialize()
+	
+	// Connect to the database
+	models.InitDatabase()
 }
 
 func main() {
-	// Connect to the database
-	models.InitDatabase()
-
 	// Create a new Gin router
 	r := gin.Default()
 
@@ -36,8 +47,8 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{
 			"/user": gin.H{
 				"/register": "POST | Create a new user in the database",
-				"/login": "POST | Log in an existing user in the database",
-		},
+				"/login":    "POST | Log in an existing user in the database",
+			},
 		})
 	})
 
@@ -47,7 +58,7 @@ func main() {
 		// User Registration Endpoints
 		user.GET("/register", helpers.MethodNotAllowed("GET Method not Allowed !"))
 		user.POST("/register", auth.RegisterPost())
-		
+
 		// User Login Endpoints
 		user.GET("/login", helpers.MethodNotAllowed("GET Method not Allowed !"))
 		user.POST("/login", auth.LoginPost())
