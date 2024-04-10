@@ -22,3 +22,9 @@
 
 # Dependency directories (remove the comment below to include it)
 vendor/
+
+# Ignore the Github CLI SSH Key
+ /home/vscode/.ssh/id_ed25519.pub
+
+# Ignore the Firebase Admin SDK Key
+keys/

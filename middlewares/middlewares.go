@@ -10,7 +10,7 @@ import (
 // Authenticate the user using the JWT token
 func JwtAuthMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		err  := token.TokenValid(c)
+		err := token.TokenValid(c)
 
 		if err != nil {
 			c.String(http.StatusUnauthorized, "Unauthorized")

@@ -1,0 +1,307 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+Firebase Admin SDK | 2024/04/08 16:47:11 | GCLOUD_PROJECT:  seal-the-meal
+Firebase Admin SDK | 2024/04/08 16:47:11 | FIREBASE_AUTH_EMULATOR_HOST:  127.0.0.1:5642
+Firebase Admin SDK | 2024/04/08 16:47:11 | FIRESTORE_EMULATOR_HOST:  127.0.0.1:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/08 16:47:11 endpoint GET / main.main.func1 3
+API Server | 2024/04/08 16:47:11 endpoint GET /user/register main.main.MethodNotAllowed.func2 3
+API Server | 2024/04/08 16:47:11 endpoint POST /user/register main.main.RegisterPost.func3 3
+API Server | 2024/04/08 16:47:11 endpoint GET /user/login main.main.MethodNotAllowed.func4 3
+API Server | 2024/04/08 16:47:11 endpoint POST /user/login main.main.LoginPost.func5 3
+API Server | 2024/04/08 16:47:11 endpoint GET /api/v1/admin/user main.main.CurrentUser.func7 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+Firebase Admin SDK | 2024/04/08 17:51:07 | GCLOUD_PROJECT:  seal-the-meal
+Firebase Admin SDK | 2024/04/08 17:51:07 | FIREBASE_AUTH_EMULATOR_HOST:  127.0.0.1:5642
+Firebase Admin SDK | 2024/04/08 17:51:07 | FIRESTORE_EMULATOR_HOST:  127.0.0.1:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/08 17:51:07 endpoint GET / main.main.func1 3
+API Server | 2024/04/08 17:51:07 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func2 3
+API Server | 2024/04/08 17:51:07 endpoint POST /api/v1/user/register main.main.RegisterPost.func3 3
+API Server | 2024/04/08 17:51:07 endpoint GET /api/v1/user main.main.CurrentUser.func5 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN] 2024/04/08 - 17:51:21 | 404 |         531ns |       127.0.0.1 | POST     "/user/register/"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/08 - 17:51:37 | 201 |  1.280051166s |       127.0.0.1 | POST     "/api/v1/user/register"
+Firebase Admin SDK | 2024/04/08 17:55:55 | GCLOUD_PROJECT:  seal-the-meal
+Firebase Admin SDK | 2024/04/08 17:55:55 | FIREBASE_AUTH_EMULATOR_HOST:  
+Firebase Admin SDK | 2024/04/08 17:55:55 | FIRESTORE_EMULATOR_HOST:  
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/08 17:55:55 endpoint GET / main.main.func1 3
+API Server | 2024/04/08 17:55:55 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func2 3
+API Server | 2024/04/08 17:55:55 endpoint POST /api/v1/user/register main.main.RegisterPost.func3 3
+API Server | 2024/04/08 17:55:55 endpoint GET /api/v1/user main.main.CurrentUser.func5 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/08 - 17:56:02 | 201 |  1.211820593s |       127.0.0.1 | POST     "/api/v1/user/register"
+Firebase Admin SDK | 2024/04/08 18:01:56 | GCLOUD_PROJECT:  seal-the-meal
+Firebase Admin SDK | 2024/04/08 18:01:56 | FIREBASE_AUTH_EMULATOR_HOST:  
+Firebase Admin SDK | 2024/04/08 18:01:56 | FIRESTORE_EMULATOR_HOST:  
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/08 18:01:56 endpoint GET / main.main.func1 3
+API Server | 2024/04/08 18:01:56 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func3 3
+API Server | 2024/04/08 18:01:56 endpoint POST /api/v1/user/register main.main.RegisterPost.func4 3
+API Server | 2024/04/08 18:01:56 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/08 18:01:56 endpoint GET /api/v1/user main.main.CurrentUser.func6 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 301: /api/v1/users --> /api/v1/users
+[GIN] 2024/04/08 - 18:02:04 | 500 |  615.745829ms |       127.0.0.1 | GET      "/api/v1/users"
+Firebase Admin SDK | 2024/04/08 18:17:03 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/08 18:17:03 | FIREBASE_AUTH_EMULATOR_HOST:  
+Firebase Admin SDK | 2024/04/08 18:17:03 | FIRESTORE_EMULATOR_HOST:  
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/08 18:17:03 endpoint GET / main.main.func1 3
+API Server | 2024/04/08 18:17:03 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func3 3
+API Server | 2024/04/08 18:17:03 endpoint POST /api/v1/user/register main.main.RegisterPost.func4 3
+API Server | 2024/04/08 18:17:03 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/08 18:17:03 endpoint GET /api/v1/user main.main.CurrentUser.func6 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/08 - 18:17:15 | 201 |  1.308470275s |       127.0.0.1 | POST     "/api/v1/user/register"
+[GIN-debug] redirecting request 301: /api/v1/users --> /api/v1/users
+[GIN] 2024/04/08 - 18:17:44 | 500 |  315.852831ms |       127.0.0.1 | GET      "/api/v1/users"
+[GIN-debug] redirecting request 301: /api/v1/users --> /api/v1/users
+[GIN] 2024/04/08 - 18:17:54 | 500 |   368.65632ms |       127.0.0.1 | GET      "/api/v1/users"
+Firebase Admin SDK | 2024/04/10 08:49:27 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 08:49:27 | FIREBASE_AUTH_EMULATOR_HOST:  
+Firebase Admin SDK | 2024/04/10 08:49:27 | FIRESTORE_EMULATOR_HOST:  
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 08:49:27 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 08:49:27 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func3 3
+API Server | 2024/04/10 08:49:27 endpoint POST /api/v1/user/register main.main.RegisterPost.func4 3
+API Server | 2024/04/10 08:49:27 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 08:49:27 endpoint GET /api/v1/user main.main.CurrentUser.func6 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+Firebase Admin SDK | 2024/04/10 08:50:31 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 08:50:31 | FIREBASE_AUTH_EMULATOR_HOST:  
+Firebase Admin SDK | 2024/04/10 08:50:31 | FIRESTORE_EMULATOR_HOST:  
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 08:50:31 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 08:50:31 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func3 3
+API Server | 2024/04/10 08:50:31 endpoint POST /api/v1/user/register main.main.RegisterPost.func4 3
+API Server | 2024/04/10 08:50:31 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 08:50:31 endpoint GET /api/v1/user main.main.CurrentUser.func6 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+Firebase Admin SDK | 2024/04/10 08:57:10 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 08:57:10 | FIREBASE_AUTH_EMULATOR_HOST:  0.0.0.0:5642
+Firebase Admin SDK | 2024/04/10 08:57:10 | FIRESTORE_EMULATOR_HOST:  0.0.0.0:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 08:57:10 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 08:57:10 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func3 3
+API Server | 2024/04/10 08:57:10 endpoint POST /api/v1/user/register main.main.RegisterPost.func4 3
+API Server | 2024/04/10 08:57:10 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 08:57:10 endpoint GET /api/v1/user main.main.CurrentUser.func6 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 301: /api/v1/users --> /api/v1/users
+[GIN] 2024/04/10 - 08:57:31 | 500 |  600.828491ms |       127.0.0.1 | GET      "/api/v1/users"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/10 - 08:59:11 | 201 |  997.871213ms |       127.0.0.1 | POST     "/api/v1/user/register"
+Firebase Admin SDK | 2024/04/10 09:06:59 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 09:06:59 | FIREBASE_AUTH_EMULATOR_HOST:  0.0.0.0:5642
+Firebase Admin SDK | 2024/04/10 09:06:59 | FIRESTORE_EMULATOR_HOST:  0.0.0.0:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 09:06:59 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 09:06:59 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func3 3
+API Server | 2024/04/10 09:06:59 endpoint POST /api/v1/user/register main.main.RegisterPost.func4 3
+API Server | 2024/04/10 09:06:59 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 09:06:59 endpoint GET /api/v1/user main.main.CurrentUser.func6 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/10 - 09:07:31 | 201 |   22.079363ms |       127.0.0.1 | POST     "/api/v1/user/register"
+Firebase Admin SDK | 2024/04/10 09:43:24 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 09:43:24 | FIREBASE_AUTH_EMULATOR_HOST:  0.0.0.0:5642
+Firebase Admin SDK | 2024/04/10 09:43:24 | FIRESTORE_EMULATOR_HOST:  0.0.0.0:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 09:43:24 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 09:43:24 endpoint GET /api/v1/user/register main.main.MethodNotAllowed.func3 3
+API Server | 2024/04/10 09:43:24 endpoint POST /api/v1/user/register main.main.RegisterPost.func4 3
+API Server | 2024/04/10 09:43:24 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 09:43:24 endpoint GET /api/v1/user main.main.CurrentUser.func6 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+API Server | 2024/04/10 09:50:57 Failed to create user !
+[GIN] 2024/04/10 - 09:50:57 | 500 |    1.297478ms |       127.0.0.1 | POST     "/api/v1/user/register"
+Firebase Admin SDK | 2024/04/10 09:51:53 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 09:51:53 | FIREBASE_AUTH_EMULATOR_HOST:  0.0.0.0:5642
+Firebase Admin SDK | 2024/04/10 09:51:53 | FIRESTORE_EMULATOR_HOST:  0.0.0.0:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 09:52:04 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 09:52:04 endpoint GET /api/v1/user/register github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers.MethodNotAllowed.func1 3
+API Server | 2024/04/10 09:52:04 endpoint POST /api/v1/user/register github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth.RegisterPost.func1 3
+API Server | 2024/04/10 09:52:04 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 09:52:04 endpoint GET /api/v1/user github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth.CurrentUser.func1 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+Firebase Admin SDK | 2024/04/10 09:54:07 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 09:54:07 | FIREBASE_AUTH_EMULATOR_HOST:  0.0.0.0:5642
+Firebase Admin SDK | 2024/04/10 09:54:07 | FIRESTORE_EMULATOR_HOST:  0.0.0.0:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 09:54:08 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 09:54:08 endpoint GET /api/v1/user/register github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers.MethodNotAllowed.func1 3
+API Server | 2024/04/10 09:54:08 endpoint POST /api/v1/user/register github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth.RegisterPost.func1 3
+API Server | 2024/04/10 09:54:08 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 09:54:08 endpoint GET /api/v1/user github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth.CurrentUser.func1 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/10 - 09:54:30 | 201 | 14.898162237s |       127.0.0.1 | POST     "/api/v1/user/register"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/10 - 10:08:39 | 201 |   2.55504933s |       127.0.0.1 | POST     "/api/v1/user/register"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+API Server | 2024/04/10 10:18:25 Failed to create user !
+[GIN] 2024/04/10 - 10:18:25 | 500 |  2.691313594s |       127.0.0.1 | POST     "/api/v1/user/register"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+API Server | 2024/04/10 10:18:40 Failed to create user !
+[GIN] 2024/04/10 - 10:18:40 | 500 |   1.98295494s |       127.0.0.1 | POST     "/api/v1/user/register"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+API Server | 2024/04/10 10:21:58 Failed to create user !
+[GIN] 2024/04/10 - 10:21:58 | 500 | 28.641170692s |       127.0.0.1 | POST     "/api/v1/user/register"
+Firebase Admin SDK | 2024/04/10 10:23:30 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 10:23:30 | FIREBASE_AUTH_EMULATOR_HOST:  0.0.0.0:5642
+Firebase Admin SDK | 2024/04/10 10:23:30 | FIRESTORE_EMULATOR_HOST:  0.0.0.0:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 10:23:30 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 10:23:30 endpoint GET /api/v1/user/register github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers.MethodNotAllowed.func1 3
+API Server | 2024/04/10 10:23:30 endpoint POST /api/v1/user/register github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth.RegisterPost.func1 3
+API Server | 2024/04/10 10:23:30 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 10:23:30 endpoint GET /api/v1/user github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth.CurrentUser.func1 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+API Server | 2024/04/10 10:23:44 Failed to create user ! user with the provided phone number already exists
+[GIN] 2024/04/10 - 10:23:44 | 500 |   2.03479621s |       127.0.0.1 | POST     "/api/v1/user/register"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+API Server | 2024/04/10 10:24:18 Failed to create user ! user with the provided phone number already exists
+[GIN] 2024/04/10 - 10:24:18 | 500 |  2.058176717s |       127.0.0.1 | POST     "/api/v1/user/register"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/10 - 10:25:41 | 201 |  2.214487365s |       127.0.0.1 | POST     "/api/v1/user/register"
+[GIN-debug] redirecting request 307: /api/v1/user/register --> /api/v1/user/register
+[GIN] 2024/04/10 - 10:27:32 | 201 |  2.754371898s |       127.0.0.1 | POST     "/api/v1/user/register"
+Firebase Admin SDK | 2024/04/10 10:57:33 | GCLOUD_PROJECT:  
+Firebase Admin SDK | 2024/04/10 10:57:33 | FIREBASE_AUTH_EMULATOR_HOST:  0.0.0.0:5642
+Firebase Admin SDK | 2024/04/10 10:57:33 | FIRESTORE_EMULATOR_HOST:  0.0.0.0:5643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+API Server | 2024/04/10 10:57:33 endpoint GET / main.main.func1 3
+API Server | 2024/04/10 10:57:33 endpoint GET /api/v1/user/register github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/helpers.MethodNotAllowed.func1 3
+API Server | 2024/04/10 10:57:33 endpoint POST /api/v1/user/register github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth.RegisterPost.func1 3
+API Server | 2024/04/10 10:57:33 endpoint GET /api/v1/users main.main.func2 3
+API Server | 2024/04/10 10:57:33 endpoint GET /api/v1/user github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth.CurrentUser.func1 4
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT="8000"
+[GIN-debug] Listening and serving HTTP on :8000

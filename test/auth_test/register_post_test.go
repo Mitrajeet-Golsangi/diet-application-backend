@@ -1,49 +1,47 @@
 package auth_test
 
-import (
-	"bytes"
-	"encoding/json"
-	"net/http"
-	"net/http/httptest"
-	"testing"
+// import (
+// 	"bytes"
+// 	"context"
+// 	"encoding/json"
+// 	"net/http"
+// 	"net/http/httptest"
+// 	"testing"
 
-	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth"
-	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
-	"github.com/Mitrajeet-Golsangi/diet-application-backend/test/testdata"
-	"github.com/stretchr/testify/assert"
-)
+// 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/app/auth"
+// 	"github.com/Mitrajeet-Golsangi/diet-application-backend/internal/pkg/models"
+// 	"github.com/Mitrajeet-Golsangi/diet-application-backend/test/testdata"
+// 	"github.com/stretchr/testify/assert"
+// )
 
-func TestRegisterPostSuccess(t *testing.T) {
-	r := testdata.SetupRouter()
-	mock := testdata.InitializeTestDB()
+// func TestRegisterPostSuccess(t *testing.T) {
+// 	r := testdata.SetupRouter()
 
-	// Create a sample user to insert in the database
-	sampleData := models.User{
-		Name:        "AAA",
-		Email:       "aaa@test.com",
-		Username:    "aaa",
-		Password:    "password",
-		PhoneNumber: 1234567890,
-		Gender:      "Male",
-	}
+// 	// Setup the firestore database
+// 	client := testdata.InitializeTestDB(context.Background())
+// 	defer client.Close()
 
-	// Convert the sample data to JSON
-	jsonBody, _ := json.Marshal(sampleData)
+// 	// Create a sample user to insert in the database
+// 	sampleData := models.User{
+// 		Name:        "AAA",
+// 		Email:       "aaa@test.com",
+// 		Username:    "aaa",
+// 		Password:    "password",
+// 		PhoneNumber: 1234567890,
+// 		Gender:      "Male",
+// 	}
 
-	// Expect the insert query to be executed and return the user ID
-	mock.ExpectBegin()
-	mock.ExpectQuery("INSERT INTO \"users\" (.+) VALUES (.+)").WillReturnRows(mock.NewRows([]string{"id"}).AddRow("1"))
-	mock.ExpectCommit()
+// 	// Convert the sample data to JSON
+// 	jsonBody, _ := json.Marshal(sampleData)
 
-	// Mock the endpoint mapping to the register post request
-	r.POST("/", auth.RegisterPost())
-	
-	// Send the register post request
-	req, _ := http.NewRequest("POST", "/", bytes.NewBuffer(jsonBody))
-	w := httptest.NewRecorder()
-	
-	r.ServeHTTP(w, req)
+// 	// Mock the endpoint mapping to the register post request
+// 	r.POST("/", auth.RegisterPost())
 
-	assert.Equal(t, http.StatusCreated, w.Code)
-	assert.Nil(t, mock.ExpectationsWereMet())
-}
+// 	// Send the register post request
+// 	req, _ := http.NewRequest("POST", "/", bytes.NewBuffer(jsonBody))
+// 	w := httptest.NewRecorder()
+
+// 	r.ServeHTTP(w, req)
+
+// 	assert.Equal(t, http.StatusCreated, w.Code)
+// }

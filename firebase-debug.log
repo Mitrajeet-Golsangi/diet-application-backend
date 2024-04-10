@@ -1,0 +1,242 @@
+[debug] [2024-04-10T10:26:24.919Z] ----------------------------------------------------------------------
+[debug] [2024-04-10T10:26:24.921Z] Command:       /usr/local/share/nvm/versions/node/v20.12.1/bin/node /usr/local/share/nvm/versions/node/v20.12.1/bin/firebase emulators:start --import=./emulators/data --export-on-exit=./emulators/data
+[debug] [2024-04-10T10:26:24.922Z] CLI Version:   13.7.1
+[debug] [2024-04-10T10:26:24.922Z] Platform:      linux
+[debug] [2024-04-10T10:26:24.922Z] Node Version:  v20.12.1
+[debug] [2024-04-10T10:26:24.922Z] Time:          Wed Apr 10 2024 10:26:24 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-04-10T10:26:24.922Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-10T10:26:25.011Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-10T10:26:25.012Z] > authorizing via signed-in user (mitrajeetgolsangi@gmail.com)
+[debug] [2024-04-10T10:26:25.071Z] openjdk version "21.0.2" 2024-01-16 LTS
+
+[debug] [2024-04-10T10:26:25.072Z] OpenJDK Runtime Environment Temurin-21.0.2+13 (build 21.0.2+13-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.2+13 (build 21.0.2+13-LTS, mixed mode, sharing)
+
+[debug] [2024-04-10T10:26:25.085Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, functions, firestore, database, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, extensions"}}
+[debug] [2024-04-10T10:26:25.090Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal [none]
+[debug] [2024-04-10T10:26:25.588Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal 200
+[debug] [2024-04-10T10:26:25.589Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal {"projectId":"seal-the-meal","projectNumber":"559371234950","displayName":"Seal-The-Meal","name":"projects/seal-the-meal","resources":{"hostingSite":"seal-the-meal"},"state":"ACTIVE","etag":"1_ddb5254f-5815-4892-85be-413bd9aefbe6"}
+[debug] [2024-04-10T10:26:25.598Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-10T10:26:25.600Z] assigned listening specs for emulators {"user":{"ui":[{"address":"0.0.0.0","family":"IPv4","port":4000}],"auth":[{"address":"0.0.0.0","family":"IPv4","port":5642}],"firestore":[{"address":"0.0.0.0","family":"IPv4","port":5643}],"firestore.websocket":[{"address":"0.0.0.0","family":"IPv4","port":9150}],"database":[{"address":"0.0.0.0","family":"IPv4","port":5644}],"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-04-10T10:26:25.608Z] [hub] writing locator at /tmp/hub-seal-the-meal.json
+[debug] [2024-04-10T10:26:25.642Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2024-04-10T10:26:25.644Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-10T10:26:25.644Z] late-assigned ports for functions and eventarc emulators {"user":{"ui":[{"address":"0.0.0.0","family":"IPv4","port":4000}],"auth":[{"address":"0.0.0.0","family":"IPv4","port":5642}],"firestore":[{"address":"0.0.0.0","family":"IPv4","port":5643}],"firestore.websocket":[{"address":"0.0.0.0","family":"IPv4","port":9150}],"database":[{"address":"0.0.0.0","family":"IPv4","port":5644}],"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"0.0.0.0","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mhosting, pubsub, storage\u001b[22m"}}
+[debug] [2024-04-10T10:26:25.648Z] defaultcredentials: writing to file /home/vscode/.config/firebase/mitrajeetgolsangi_gmail_com_application_default_credentials.json
+[debug] [2024-04-10T10:26:25.649Z] Setting GAC to /home/vscode/.config/firebase/mitrajeetgolsangi_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/vscode/.config/firebase/mitrajeetgolsangi_gmail_com_application_default_credentials.json"}}
+[debug] [2024-04-10T10:26:25.650Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal/adminSdkConfig [none]
+[debug] [2024-04-10T10:26:26.008Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal/adminSdkConfig 200
+[debug] [2024-04-10T10:26:26.008Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal/adminSdkConfig {"projectId":"seal-the-meal","storageBucket":"seal-the-meal.appspot.com"}
+[info] i  firestore: Importing data from /workspaces/backend/emulators/data/firestore_export/firestore_export.overall_export_metadata {"metadata":{"emulator":{"name":"firestore"},"message":"Importing data from /workspaces/backend/emulators/data/firestore_export/firestore_export.overall_export_metadata"}}
+[debug] [2024-04-10T10:26:26.033Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-10T10:26:26.033Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-04-10T10:26:26.034Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/home/vscode/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.4.jar","--host","0.0.0.0","--port",5643,"--websocket_port",9150,"--project_id","seal-the-meal","--seed_from_export","/workspaces/backend/emulators/data/firestore_export/firestore_export.overall_export_metadata","--rules","/workspaces/backend/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/home/vscode/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.4.jar\",\"--host\",\"0.0.0.0\",\"--port\",5643,\"--websocket_port\",9150,\"--project_id\",\"seal-the-meal\",\"--seed_from_export\",\"/workspaces/backend/emulators/data/firestore_export/firestore_export.overall_export_metadata\",\"--rules\",\"/workspaces/backend/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2024-04-10T10:26:27.753Z] Apr 10, 2024 10:26:27 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://0.0.0.0:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:26:27 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://0.0.0.0:9150\n"}}
+[debug] [2024-04-10T10:26:27.782Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-04-10T10:26:27.783Z] 0.0.0.0:5643
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=0.0.0.0:5643
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=0.0.0.0:5643
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"0.0.0.0:5643\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=0.0.0.0:5643\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=0.0.0.0:5643\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2024-04-10T10:26:27.803Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal [none]
+[debug] [2024-04-10T10:26:28.111Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal 200
+[debug] [2024-04-10T10:26:28.111Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/seal-the-meal {"projectId":"seal-the-meal","projectNumber":"559371234950","displayName":"Seal-The-Meal","name":"projects/seal-the-meal","resources":{"hostingSite":"seal-the-meal"},"state":"ACTIVE","etag":"1_ddb5254f-5815-4892-85be-413bd9aefbe6"}
+[debug] [2024-04-10T10:26:28.112Z] database rules config:  []
+[warn] ⚠  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2024-04-10T10:26:28.113Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-04-10T10:26:28.113Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-10T10:26:28.113Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2024-04-10T10:26:28.113Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/home/vscode/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","0.0.0.0","--port",5644,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/home/vscode/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"0.0.0.0\",\"--port\",5644,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2024-04-10T10:26:30.239Z] 10:26:30.235 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"10:26:30.235 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2024-04-10T10:26:30.565Z] 10:26:30.564 [main] INFO com.firebase.server.forge.App$ - Listening at 0.0.0.0:5644
+ {"metadata":{"emulator":{"name":"database"},"message":"10:26:30.564 [main] INFO com.firebase.server.forge.App$ - Listening at 0.0.0.0:5644\n"}}
+[info] i  auth: Importing config from /workspaces/backend/emulators/data/auth_export/config.json {"metadata":{"emulator":{"name":"auth"},"message":"Importing config from /workspaces/backend/emulators/data/auth_export/config.json"}}
+[info] i  auth: Importing accounts from /workspaces/backend/emulators/data/auth_export/accounts.json {"metadata":{"emulator":{"name":"auth"},"message":"Importing accounts from /workspaces/backend/emulators/data/auth_export/accounts.json"}}
+[debug] [2024-04-10T10:26:42.557Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-10T10:26:42.558Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-04-10T10:26:42.558Z] Starting Emulator UI with command {"binary":"node","args":["/home/vscode/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/vscode/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-04-10T10:26:42.721Z] Web / API server started at 0.0.0.0:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 0.0.0.0:4000\n"}}
+[debug] [2024-04-10T10:26:42.814Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/workspaces/backend/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/workspaces/backend/functions\" for Cloud Functions..."}}
+[debug] [2024-04-10T10:26:42.845Z] Validating nodejs source
+[debug] [2024-04-10T10:26:43.901Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-10T10:26:43.903Z] Building nodejs source
+[debug] [2024-04-10T10:26:43.904Z] Failed to find version of module node: reached end of search path /workspaces/backend/functions/node_modules
+[info] ✔  functions: Using node@20 from host. 
+[debug] [2024-04-10T10:26:43.910Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-10T10:26:43.924Z] Found firebase-functions binary at '/workspaces/backend/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8950
+
+[debug] [2024-04-10T10:26:52.215Z] Got response from /__/functions.yaml {"endpoints":{"createUserInfoDocument":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/seal-the-meal"},"retry":false},"labels":{},"entryPoint":"createUserInfoDocument"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: createUserInfoDocument. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createUserInfoDocument."}}
+[debug] [2024-04-10T10:26:57.233Z] addAuthTrigger {"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/seal-the-meal"}}
+[info] ✔  functions[us-central1-createUserInfoDocument]: auth function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mauth\u001b[22m function initialized."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬──────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port    │ View in Emulator UI              │
+├────────────────┼──────────────┼──────────────────────────────────┤
+│ Authentication │ 0.0.0.0:5642 │ http://127.0.0.1:4000/auth       │
+├────────────────┼──────────────┼──────────────────────────────────┤
+│ Functions      │ 0.0.0.0:5001 │ http://127.0.0.1:4000/functions  │
+├────────────────┼──────────────┼──────────────────────────────────┤
+│ Firestore      │ 0.0.0.0:5643 │ http://127.0.0.1:4000/firestore  │
+├────────────────┼──────────────┼──────────────────────────────────┤
+│ Database       │ 0.0.0.0:5644 │ http://127.0.0.1:4000/database   │
+├────────────────┼──────────────┼──────────────────────────────────┤
+│ Extensions     │ 0.0.0.0:5001 │ http://127.0.0.1:4000/extensions │
+└────────────────┴──────────────┴──────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-04-10T10:27:28.450Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/seal-the-meal/trigger_multicast [none]
+[debug] [2024-04-10T10:27:28.451Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/seal-the-meal/trigger_multicast {"eventId":"8084a390-e9d8-45c2-8420-40654331fce7","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/seal-the-meal","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-04-10T10:27:28.450Z","data":{"uid":"myYIAgI4uM4p2kkoFBYljlBtFKkg","email":"local.user.1@test.com","emailVerified":false,"displayName":"Local User 1","phoneNumber":"+919922689422","disabled":false,"metadata":{"creationTime":"2024-04-10T10:25:41.542Z","lastSignInTime":"2024-04-10T10:25:41.542Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"local.user.1@test.com","federatedId":"local.user.1@test.com","rawId":"local.user.1@test.com","displayName":"Local User 1"},{"providerId":"phone","phoneNumber":"+919922689422","rawId":"+919922689422"}]}}
+[debug] [2024-04-10T10:27:28.459Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/seal-the-meal/trigger_multicast 200
+[debug] [2024-04-10T10:27:28.459Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/seal-the-meal/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-04-10T10:27:32.660Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/seal-the-meal/trigger_multicast [none]
+[debug] [2024-04-10T10:27:32.661Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/seal-the-meal/trigger_multicast {"eventId":"ff9dea82-9b1e-4ab7-8995-3d81aa9bee65","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/seal-the-meal","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-04-10T10:27:32.660Z","data":{"uid":"o3m8XKDfwmvWbIWvTTAj92JpI8C6","email":"local.user.1@test.com","emailVerified":false,"displayName":"Local User 1","phoneNumber":"+919922689422","metadata":{"creationTime":"2024-04-10T10:27:32.659Z","lastSignInTime":"2024-04-10T10:27:32.659Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"local.user.1@test.com","federatedId":"local.user.1@test.com","rawId":"local.user.1@test.com","displayName":"Local User 1"},{"providerId":"phone","phoneNumber":"+919922689422","rawId":"+919922689422"}]}}
+[debug] [2024-04-10T10:27:32.664Z] [work-queue] {"queuedWork":["us-central1-createUserInfoDocument-0-2024-04-10T10:27:32.664Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-10T10:27:32.664Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["us-central1-createUserInfoDocument-0-2024-04-10T10:27:32.664Z"],"workRunningCount":1}
+[debug] [2024-04-10T10:27:32.665Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-10T10:27:32.670Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/seal-the-meal/trigger_multicast 200
+[debug] [2024-04-10T10:27:32.670Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/seal-the-meal/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-04-10T10:27:32.672Z] [work-queue] {"queuedWork":["/functions/projects/seal-the-meal/triggers/us-central1-createUserInfoDocument-0-2024-04-10T10:27:32.672Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-10T10:27:32.672Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/seal-the-meal/triggers/us-central1-createUserInfoDocument-0-2024-04-10T10:27:32.672Z"],"workRunningCount":1}
+[debug] [2024-04-10T10:27:32.673Z] Accepted request POST /functions/projects/seal-the-meal/triggers/us-central1-createUserInfoDocument-0 --> us-central1-createUserInfoDocument-0
+[debug] [2024-04-10T10:27:32.673Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-04-10T10:27:32.673Z] [functions] Got req.url=/functions/projects/seal-the-meal/triggers/us-central1-createUserInfoDocument-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/seal-the-meal/triggers/us-central1-createUserInfoDocument-0, mapping to path=/functions/projects/"}}
+[debug] [2024-04-10T10:27:32.693Z] [worker-pool] addWorker(us-central1-createUserInfoDocument) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-createUserInfoDocument)"}}
+[debug] [2024-04-10T10:27:32.694Z] [worker-pool] Adding worker with key us-central1-createUserInfoDocument, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-createUserInfoDocument, total=1"}}
+[debug] [2024-04-10T10:27:33.820Z] [runtime-status] [15570] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/workspaces/backend/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/workspaces/backend/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-10T10:27:33.867Z] [runtime-status] [15570] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-10T10:27:33.868Z] [runtime-status] [15570] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-04-10T10:27:33.889Z] [runtime-status] [15570] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-10T10:27:41.954Z] [runtime-status] [15570] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-04-10T10:27:41.954Z] [runtime-status] [15570] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.9.0","resolution":"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-04-10T10:27:41.970Z] [runtime-status] [15570] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-10T10:27:42.005Z] [runtime-status] [15570] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/workspaces/backend/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/workspaces/backend/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-04-10T10:27:42.061Z] [runtime-status] [15570] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.9.0\",\"resolution\":\"/workspaces/backend/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-04-10T10:27:42.062Z] [runtime-status] [15570] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.1","resolution":"/workspaces/backend/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/workspaces/backend/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-04-10T10:27:42.220Z] [runtime-status] [15570] Functions runtime initialized. {"cwd":"/workspaces/backend/functions","node_version":"20.12.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Functions runtime initialized. {\"cwd\":\"/workspaces/backend/functions\",\"node_version\":\"20.12.1\"}"}}
+[debug] [2024-04-10T10:27:42.220Z] [runtime-status] [15570] Listening to port: /tmp/fire_emu_acb78dff42ad2ee4.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] Listening to port: /tmp/fire_emu_acb78dff42ad2ee4.sock"}}
+[debug] [2024-04-10T10:27:42.310Z] [worker-us-central1-createUserInfoDocument-6a38422b-2f1e-47b7-b86a-46b88c8ce825]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[worker-us-central1-createUserInfoDocument-6a38422b-2f1e-47b7-b86a-46b88c8ce825]: IDLE"}}
+[debug] [2024-04-10T10:27:42.311Z] [worker-pool] submitRequest(triggerId=us-central1-createUserInfoDocument) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-createUserInfoDocument)"}}
+[info] i  functions: Beginning execution of "us-central1-createUserInfoDocument" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"Beginning execution of \"us-central1-createUserInfoDocument\""}}
+[debug] [2024-04-10T10:27:42.312Z] [worker-us-central1-createUserInfoDocument-6a38422b-2f1e-47b7-b86a-46b88c8ce825]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[worker-us-central1-createUserInfoDocument-6a38422b-2f1e-47b7-b86a-46b88c8ce825]: BUSY"}}
+[debug] [2024-04-10T10:27:42.329Z] [runtime-status] [15570] ProcessBackground: lifting resource.name from resource {"name":"projects/seal-the-meal","service":"firebaseauth.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/seal-the-meal\",\"service\":\"firebaseauth.googleapis.com\"}"}}
+[debug] [2024-04-10T10:27:42.330Z] [runtime-status] [15570] RunBackground {"data":{"uid":"o3m8XKDfwmvWbIWvTTAj92JpI8C6","email":"local.user.1@test.com","emailVerified":false,"displayName":"Local User 1","phoneNumber":"+919922689422","metadata":{"creationTime":"2024-04-10T10:27:32.659Z","lastSignInTime":"2024-04-10T10:27:32.659Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"local.user.1@test.com","federatedId":"local.user.1@test.com","rawId":"local.user.1@test.com","displayName":"Local User 1"},{"providerId":"phone","phoneNumber":"+919922689422","rawId":"+919922689422"}]},"context":{"eventId":"ff9dea82-9b1e-4ab7-8995-3d81aa9bee65","eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/seal-the-meal","params":{},"timestamp":"2024-04-10T10:27:32.660Z"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[runtime-status] [15570] RunBackground {\"data\":{\"uid\":\"o3m8XKDfwmvWbIWvTTAj92JpI8C6\",\"email\":\"local.user.1@test.com\",\"emailVerified\":false,\"displayName\":\"Local User 1\",\"phoneNumber\":\"+919922689422\",\"metadata\":{\"creationTime\":\"2024-04-10T10:27:32.659Z\",\"lastSignInTime\":\"2024-04-10T10:27:32.659Z\"},\"customClaims\":{},\"providerData\":[{\"providerId\":\"password\",\"email\":\"local.user.1@test.com\",\"federatedId\":\"local.user.1@test.com\",\"rawId\":\"local.user.1@test.com\",\"displayName\":\"Local User 1\"},{\"providerId\":\"phone\",\"phoneNumber\":\"+919922689422\",\"rawId\":\"+919922689422\"}]},\"context\":{\"eventId\":\"ff9dea82-9b1e-4ab7-8995-3d81aa9bee65\",\"eventType\":\"providers/firebase.auth/eventTypes/user.create\",\"resource\":\"projects/seal-the-meal\",\"params\":{},\"timestamp\":\"2024-04-10T10:27:32.660Z\"}}"}}
+[debug] [2024-04-10T10:27:55.070Z] Apr 10, 2024 10:27:55 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:27:55 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:27:55.242Z] Apr 10, 2024 10:27:55 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:27:55 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:28:08.316Z] Apr 10, 2024 10:28:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:28:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:28:08.525Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-createUserInfoDocument" in 26213.143844ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"Finished \"us-central1-createUserInfoDocument\" in 26213.143844ms"}}
+[debug] [2024-04-10T10:28:08.526Z] [worker-us-central1-createUserInfoDocument-6a38422b-2f1e-47b7-b86a-46b88c8ce825]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"[worker-us-central1-createUserInfoDocument-6a38422b-2f1e-47b7-b86a-46b88c8ce825]: IDLE"}}
+[debug] [2024-04-10T10:28:08.526Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-04-10T10:28:08.526Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createUserInfoDocument"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-04-10T10:28:08.526Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-04-10T10:28:19.555Z] Apr 10, 2024 10:28:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:28:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:28:20.603Z] Apr 10, 2024 10:28:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:28:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:28:21.367Z] Apr 10, 2024 10:28:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:28:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:29:06.732Z] Apr 10, 2024 10:29:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:29:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:29:52.042Z] Apr 10, 2024 10:29:52 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:29:52 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:30:37.508Z] Apr 10, 2024 10:30:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:30:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:30:41.831Z] Apr 10, 2024 10:30:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:30:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:31:15.578Z] Apr 10, 2024 10:31:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:31:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:31:15.581Z] Apr 10, 2024 10:31:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:31:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:31:15.585Z] Apr 10, 2024 10:31:15 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:31:15 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2024-04-10T10:31:21.220Z] Apr 10, 2024 10:31:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:31:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:31:21.875Z] Apr 10, 2024 10:31:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:31:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:31:22.294Z] Apr 10, 2024 10:31:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:31:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:32:38.298Z] Apr 10, 2024 10:32:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:32:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:33:06.582Z] Apr 10, 2024 10:33:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:33:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-04-10T10:33:06.588Z] Apr 10, 2024 10:33:06 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:33:06 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2024-04-10T10:57:33.751Z] Apr 10, 2024 10:57:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 10, 2024 10:57:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}

@@ -2,15 +2,15 @@
 package helpers
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/sirupsen/logrus"
 )
 
 // Return a 400 Bad Request error to the client
 func BadRequest(c *gin.Context, message string) {
-	log.Println(message)
+	logrus.Error(message)
 	c.JSON(http.StatusBadRequest, gin.H{
 		"error": message,
 	})
@@ -18,7 +18,7 @@ func BadRequest(c *gin.Context, message string) {
 
 // Return a 401 Unauthorized error to the client
 func Unauthorized(c *gin.Context, message string) {
-	log.Println(message)
+	logrus.Error(message)
 	c.JSON(http.StatusUnauthorized, gin.H{
 		"error": message,
 	})
@@ -26,7 +26,7 @@ func Unauthorized(c *gin.Context, message string) {
 
 // Return a 403 Forbidden error to the client
 func Forbidden(c *gin.Context, message string) {
-	log.Println(message)
+	logrus.Error(message)
 	c.JSON(http.StatusForbidden, gin.H{
 		"error": message,
 	})
@@ -34,7 +34,7 @@ func Forbidden(c *gin.Context, message string) {
 
 // Return a 404 Not Found error to the client
 func NotFound(c *gin.Context, message string) {
-	log.Println(message)
+	logrus.Error(message)
 	c.JSON(http.StatusNotFound, gin.H{
 		"error": message,
 	})
@@ -51,7 +51,7 @@ func MethodNotAllowed(message string) gin.HandlerFunc {
 
 // Return a 500 Internal Server Error to the client
 func InternalServerError(c *gin.Context, message string) {
-	log.Println(message)
+	logrus.Error(message)
 	c.JSON(http.StatusInternalServerError, gin.H{
 		"error": message,
 	})
@@ -59,7 +59,7 @@ func InternalServerError(c *gin.Context, message string) {
 
 // Return a 501 Not Implemented error to the client
 func NotImplemented(c *gin.Context, message string) {
-	log.Println(message)
+	logrus.Error(message)
 	c.JSON(http.StatusNotImplemented, gin.H{
 		"error": message,
 	})

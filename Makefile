@@ -4,6 +4,11 @@ OUTPUT_DIR=build/output
 
 default: help
 
+# Start the firebase emulators
+.PHONY: emulators
+emulators:
+	firebase emulators:start --import=./emulators/data --export-on-exit=./emulators/data
+
 # Running the application locally
 .PHONY: run
 run:
@@ -32,6 +37,7 @@ clean:
 # Showing the help message to run different commands for the application
 .PHONY: help
 help:
+	@echo "make emulators\t\t- Start the Firebase emulators"
 	@echo "make run\t\t- Run the application server in development mode"
 	@echo "make help\t\t- Show this help message"
 	@echo "make test\t\t- Run the tests for the API"
